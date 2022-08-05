@@ -2,7 +2,7 @@ const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 
 // Create out of user model
-class User extends  Model {};
+class User extends Model {};
 
 User.init(
   {
