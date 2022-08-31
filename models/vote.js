@@ -20,9 +20,16 @@ Vote.init(
     },
     post_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: "post",
+        key: "id",
+      },
+    },
+    comment_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "comment",
         key: "id",
       },
     },

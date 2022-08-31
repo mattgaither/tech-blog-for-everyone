@@ -1,0 +1,26 @@
+{{> post-info post}}
+{{!-- if user is not logged in, hide comment-form --}}
+{{#if post.comments}}
+{{> comments post.comments}}
+{{else}}
+<div>Be the frist to comment on this post!</div>
+{{/if}}
+{{#if loggedIn}}
+<div class="comment-form-heading">Get In on the Discussion!</div>
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add Comment</button>
+  </div>
+</form>
+{{else}}
+  <a href="/login">You must be a registered user to post comments, click here to resister or log in!</a>
+{{/if}}
+
+{{#if loggedIn}}
+  <script src="/javascript/comment.js"></script>
+  <script src="/javascript/upvote.js"></script>
+{{/if}}

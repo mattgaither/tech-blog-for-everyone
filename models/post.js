@@ -13,7 +13,7 @@ class Post extends Model {
         },
         attributes: [
           "id",
-          "post_url",
+          "text",
           "title",
           "created_at",
           [
@@ -40,16 +40,12 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_url: {
-      type: DataTypes.STRING,
+    text: {
+      type: DataTypes.TEXT('medium'),
       allowNull: false,
       validate: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isURL: true,
-        },
-      },
+        len: [1]
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -63,7 +59,7 @@ Post.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "psot",
+    modelName: "post",
   }
 );
 
