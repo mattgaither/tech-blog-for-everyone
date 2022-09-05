@@ -7,7 +7,7 @@
     "test": "jest",
     "seeds": "node seeds",
     "dev": "nodemon server.js",
-    "start": "node start"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
