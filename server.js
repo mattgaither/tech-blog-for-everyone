@@ -1,10 +1,20 @@
-const path = require('path');
+const cool = require('cool-ascii-faces');
 const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .get('/cool', (req, res) => res.send(cool()))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 const app = express();
-const PORT = process.env.PORT || 3001;
+
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -30,7 +40,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(require('./controllers/'));
 
