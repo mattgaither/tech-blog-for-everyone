@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest",
     "seeds": "node seeds",
-    "dev": "nodemon server.js",
-    "start": "serve -s build",
-    "heroku-postbuild": "npm run build"
+    "watch": "nodemon server.js",
+    "build": "node server.js",
+    "heroku-postbuild": "npm run watch"
   },
   "repository": {
     "type": "git",
