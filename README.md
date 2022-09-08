@@ -1,6 +1,6 @@
 # Tech Blog For Everyone
 
-Deployed application: 
+Deployed application: https://tech-blog-for-everyone.herokuapp.com/
 
   ## Description
   <img src = 'https://img.shields.io/badge/MIT-%20License-inactive'>
