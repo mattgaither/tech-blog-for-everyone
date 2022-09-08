@@ -7,7 +7,7 @@
     "test": "jest",
     "seeds": "node seeds",
     "watch": "nodemon server.js",
-    "build": "node server.js",
+    "start": "node server.js",
     "heroku-postbuild": "npm run watch"
   },
   "repository": {

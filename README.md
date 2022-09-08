@@ -1,5 +1,7 @@
 # Tech Blog For Everyone
 
+Deployed application: 
+
   ## Description
   <img src = 'https://img.shields.io/badge/MIT-%20License-inactive'>
 
